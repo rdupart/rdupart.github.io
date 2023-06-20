@@ -39,7 +39,8 @@ var i = 0;
 while (i < 100) {
     drawCircle()
     i++
-   
+   //physikz.updatePosition(circles[i])
+  // game.checkCirclePosition(circles[i])
 }
 
         ////////////////////////////////////////////////////////////
