@@ -46,56 +46,39 @@ var background = function (window) {
             moon.x = 4;
             moon.y = 3;
             moon.scaleX = 2;
-            moon.scaleY = 2;
+            moon.scaleY = 2 ;
+            moon.velocityX 
             background.addChild(moon)
 
-        
-          /*  for (let i = 0; i < 15; i++)
-            {var circle = draw.circle(1, "white", "white", 2);
-circle.x = canvasWidth * Math.random();
-circle.y = groundY * Math.random();
-background.addChild(circle); */
+            var moon1 = draw.bitmap("img/bastion.png");
+            moon1.x = 8;
+            moon1.y = 3;
+            moon1.scaleX = 5;
+            moon1.scaleY = 2;
+            moon1.velocityX 
+            background.addChild(moon1)
+
+           var moon2 = draw.bitmap("img/bastion.png");
+           moon2.x = 16;
+           moon2.y = 3;
+           moon2.scaleX = 5;
+           moon2.scaleY = 2;
+           moon2.velocityX 
+           background.addChild(moon2)
+
+
+
+
+         
             // TODO 4: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
             
             
             // TODO 3: Part 1 - Add a tree
-           /* var tree;
-            tree = draw.bitmap("img/magma1.png");
-           tree.x = 0.5;
-            tree.y = groundY + 0.1;
-              tree.scaleX = 0.2
-              tree.scaleY = 0.2
-            background.addChild(tree);
-
-            var tree1;
-            tree1 = draw.bitmap("img/magma2.png");
-           tree1.x = 980;
-            tree1.y = 50;
-              tree1.scaleX = 0.1
-              tree1.scaleY = 0.1
-            background.addChild(tree1); */
-
-            
-            var tree3;
-            tree3 = draw.bitmap("img/arrowdispenser.png");
-           tree3.x = 1200;
-            tree3.y = 50;
-              tree3.scaleX = 0.5
-              tree3.scaleY = 0.5
-            background.addChild(tree3);
-
-            var tree4;
-            tree4 = draw.bitmap("img/arrowdispenser.png");
-           tree4.x = 1200;
-            tree4.y = 400;
-              tree4.scaleX = 0.5
-              tree4.scaleY = 0.5
-            background.addChild(tree4);
-
+           
             
         } // end of render function - DO NOT DELETE
         
-        
+        console.log(background)
         // Perform background animation
         // called on each timer "tick" - 60 times per second
         function update() {
@@ -105,7 +88,10 @@ background.addChild(circle); */
             var groundY = ground.y;
             
             // TODO 3: Part 2 - Move the tree!
-            
+            background.x = background.x - 0.4;
+            if(background.x < -10000) {
+                background.x = canvasWidth;
+            }
               
                 
             
